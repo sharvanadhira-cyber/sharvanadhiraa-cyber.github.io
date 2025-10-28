@@ -1,0 +1,262 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    scroll-behavior: smooth;
+}
+
+/* Utilitas */
+.section-padding {
+    padding: 60px 5%;
+}
+
+.bg-light {
+    background-color: #e9ecef;
+}
+
+.bg-dark {
+    background-color: #212529;
+    color: #fff;
+}
+
+h1, h2, h3 {
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff; /* Warna biru TKJ */
+}
+
+/* Header & Navigasi */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: #007bff;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+#nav-menu a:hover {
+    color: #0056b3;
+}
+
+.menu-toggle {
+    display: none; /* Sembunyikan secara default */
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Hero Section (Beranda) */
+.hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    background-color: #fff;
+}
+
+.hero-content {
+    max-width: 55%;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    color: #007bff;
+}
+
+.hero-content .tagline {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.hero-image {
+    max-width: 40%;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #007bff;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skill-card ul {
+    list-style: none;
+}
+
+.skill-card li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 25px;
+    border-left: 5px solid #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+.tag {
+    display: inline-block;
+    background-color: #ffe0b2; /* Warna cerah untuk tag */
+    color: #e65100;
+    padding: 3px 8px;
+    font-size: 0.8em;
+    border-radius: 3px;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.contact-info a {
+    color: #8ab4f8; /* Warna kontras di latar belakang gelap */
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0056b3;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* MEDIA QUERIES (Responsif untuk HP) */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 2; /* Pindah konten ke bawah gambar */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+    
+    .hero-image {
+        max-width: 100%;
+        margin-bottom: 30px;
+        order: 1; /* Pindah gambar ke atas konten */
+    }
+
+    /* Navigasi Responsif */
+    #nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+        padding-bottom: 10px;
+        z-index: 999;
+    }
+
+    #nav-menu a {
+        margin: 10px 0;
+        padding: 10px 5%;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    #nav-menu.open {
+        display: flex;
+    }
+}
